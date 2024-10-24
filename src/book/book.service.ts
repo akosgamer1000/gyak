@@ -22,15 +22,15 @@ export class BookService {
   }
 
   update(id: number, updateBookDto: UpdateBookDto) {
-    let book:Book=new Book(books[id-1].id,updateBookDto.title,updateBookDto.author,books[id-1].isbn,updateBookDto.publishYear,updateBookDto.reserved)
+    let book:Book=new Book(id,updateBookDto.title,updateBookDto.author,books[id-1].isbn,updateBookDto.publishYear,updateBookDto.reserved)
     books[id-1]=book
-    return book
+    return book[id-1]
   }
 
   remove(id: number) {
-    if(books[id]){
+    if(books[id-1]){
 
-      books.splice(id,1);
+      books.splice(id-1,1);
     }
     
   }
