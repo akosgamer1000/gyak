@@ -7,7 +7,7 @@ export class Book {
  publishYear: number
  reserved: boolean
  constructor(id:number,title:string,author:string,isbn:string,publisneyear:number,reserved:boolean){
-    this.id=id+1
+    this.id=id
     this.title=title
     this.author=author
     this.isbn=isbn

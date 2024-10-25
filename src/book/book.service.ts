@@ -8,7 +8,7 @@ let books:Book[]=[]
 export class BookService {
   
   create(createBookDto: CreateBookDto) {
-    let book:Book=new Book(books.length,createBookDto.title,createBookDto.author,createBookDto.isbn,createBookDto.publishYear,false)
+    let book:Book=new Book(books.length+1,createBookDto.title,createBookDto.author,createBookDto.isbn,createBookDto.publishYear,false)
     books.push(book)
     return book
   }
