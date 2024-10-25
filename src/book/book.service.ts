@@ -24,7 +24,7 @@ export class BookService {
   update(id: number, updateBookDto: UpdateBookDto) {
     let book:Book=new Book(id,updateBookDto.title,updateBookDto.author,books[id-1].isbn,updateBookDto.publishYear,updateBookDto.reserved)
     books[id-1]=book
-    return book[id-1]
+    return book
   }
 
   remove(id: number) {
